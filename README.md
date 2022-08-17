@@ -81,8 +81,9 @@ Optimize your model to achieve a target predictive accuracy higher than 75%.
     * The **IS_SUCCESSFUL** column (1 for yes or 0 for no) is the target for the model
     * The features of the model were initially the application type, affiliation, classification, use_case, organization, status, income_amt, special_considerations, and the ask_amt.
     * Initially, both the EIN and NAME columns were removed, because they were identification columns and not thought to be relevant features to the target. 
-    * Later, in the model optimization, the NAME column was included and binned. 
-    * Any NAME applicants that repeated more than five times were maintained in the dataset and all other applicants were binned as "other".  
+    * Later, in the model optimization, the NAME column was included and binned as a relevant feature. Any NAME applicants that repeated more than five times were maintained in the dataset and all other applicants were binned as "other". 
+    * The SPECIAL_CONSIDERATIONS column was removed from the feature list in the optimized model since this categorical variable did not provide much relevant information related to the target.
+    * The features of the optimized model were name, application type, affiliation, classification, use_case, organization, status, income_amt, and the ask_amt.
   
 * Compiling, Training, and Evaluating the Model
     * I chose 8 neurons in the first hidden layer with a relu activation function, 5 neurons in the second hidden layer with a relu activation function, and an output layer with a sigmoid activation function.
