@@ -96,7 +96,7 @@ Optimize your model to achieve a target predictive accuracy higher than 75%.
     * The two main levers I found to optimize model performance was one, keeping the name column as a feature in the model, and two, increasing the bin sizes for rare occurrences in categorical values, APPLICATION_TYPE and CLASSIFICATION.
 
   ## Summary
-  We were able to optimize the deep learning model from an initial accuracy of ~72% to ~78%. The model can correctly predict whether the applicant is successful or not over 75% of the time. 
+  The deep learning model was optimized from an initial accuracy of ~72% to ~78%. The model can correctly predict whether the applicant is successful or not over 75% of the time. 
   Including the applicant name as a feature was key in optimizing the model. Repeat applicants certainly influence the dataset and the model's ability to predict whether successful or not and should be kept in the model. 
 
   A random forest model could also be used to solve this classification problem, as it can handle large datasets efficiently and since it is a collection of decision trees, it should perform well in this task. The random forest model was attempted to test this hypothesis, and gave an initial accuracy of ~77% with 64 estimators allowed. 
